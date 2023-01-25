@@ -1,0 +1,195 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$body-background:  linear-gradient(0deg, rgba(110,100,231,1) 0%, rgba(171,104,235,1) 100%);
+$primary-font-color: #808080;
+
+@mixin breakpoint($point) {
+    @if $point == small {
+      @media (min-width: 480px) { @content; }
+    } @else if $point == medium {
+      @media (min-width: 720px) { @content; }
+    } @else if $point == large {
+      @media (max-width: 960px) { @content; }
+    } @else if $point == wide {
+      @media (min-width: 1200px) { @content; }
+    } @else {
+      @warn 'Not a valid breakpoint name.';
+    }
+  }
+
+body{
+    background: $body-background;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+}
+
+img{
+    max-width: 100%;
+}
+
+
+
+.js .wrapper{
+ display: grid;
+ grid-template-columns: repeat(2, 1fr);
+ border-radius: 20px;
+width: 60rem;
+height: 35rem;
+background-color: #fff;
+position: relative;
+@include breakpoint("large"){
+    grid-template-columns: 1fr;
+    margin-top: 5rem;
+    max-width: 30rem;
+}
+}
+// IMGS
+.box-desktop{
+    position: absolute;
+    height: 180px;
+    z-index: 2;
+    left: -96px;
+    top: 250px;
+    @include breakpoint("large"){
+      display: none;
+    }
+    }
+    .mobile-shadow{
+        display: none;
+        position: absolute;
+        top: 45px;
+        height: 100px;
+        width: 300px;
+
+        @include breakpoint("large"){
+            display: block;
+        }
+    }
+
+    .shadow{
+        position: absolute;
+        left: -150px;
+       height: 600px;
+       @include breakpoint("large"){
+         display: none;
+         }
+    }
+
+.image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    @include breakpoint("large"){
+       overflow: visible;
+       margin-bottom: 50px;
+    }
+.mobile-image{
+    display: none;
+    position: absolute;
+    z-index: 2;
+    height: 250px;
+    width: 400px;
+
+    @include breakpoint("large"){
+       display: block;
+    }
+}
+    .desktop{
+        position: absolute;
+       left: -80px;
+       height: 380px;
+       width: 450px;
+         @include breakpoint("large"){
+       display: none;
+        }
+     }
+}
+
+// FAQ
+  
+.js .faq-container{
+  padding: 2.5rem;
+    
+    h1{
+        font-size: 2rem;
+        margin-top: 10px;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+    .faq{
+        margin-top: 1rem;
+        dt{
+            display: flex;
+            color: $primary-font-color;
+            transition: 0.3s;
+            margin: 1.2rem 0;
+            text-align: center;
+            align-items: center;
+            justify-content: space-between;
+           animation: close 0.3s forwards;
+           @include breakpoint("large"){
+            margin: 0.675rem 0;
+           }
+            img{
+                padding: 10px;
+                cursor: pointer;
+                transition: 0.3s;
+            }
+           
+        }
+        dt.selected{
+            color: #000;
+            font-weight: bold;
+            img{
+                rotate: (180deg);
+            }
+        }
+        dd{
+            display: none;
+            font-size: 0.875rem;
+            color: $primary-font-color;
+            margin-bottom: 0.875rem;
+            transition: 0.3s;
+           
+        }
+
+        dd.selected{
+            display: block;
+            animation: open 0.3s forwards ease-in-out;
+           
+        }
+    }
+}
+
+span{
+    font-weight: bold;
+}
+
+@keyframes open {
+    0% {
+      transform: translate3d(0, -1rem, 0);
+      opacity: 0;
+    }
+    1% {
+
+      transform: translate3d(0, -1rem, 0);
+      opacity: 0;
+    }
+    100% {
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
+    }
+  }
+
+ 

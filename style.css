@@ -1,0 +1,182 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background:  linear-gradient(0deg, rgba(110,100,231,1) 0%, rgba(171,104,235,1) 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+}
+
+img{
+    max-width: 100%;
+}
+
+
+
+.wrapper{
+ display: grid;
+ grid-template-columns: repeat(2, 1fr);
+ border-radius: 20px;
+width: 60rem;
+height: 35rem;
+background-color: #fff;
+position: relative;
+
+}
+@media (max-width: 960px){
+    .wrapper{
+        display: block;
+        grid-template-columns: 1fr;
+    margin-top: 5rem;
+    max-width: 40rem;
+    }
+}
+
+
+
+
+.box-desktop{
+    position: absolute;
+    height: 180px;
+    z-index: 2;
+    left: -96px;
+    top: 250px;
+ 
+    }
+
+    @media (max-width: 960px){
+        .box-desktop{
+            display: none;
+        }
+    }
+    .mobile-shadow{
+        display: none;
+        position: absolute;
+        top: 45px;
+        height: 100px;
+        width: 300px;
+    }
+    @media (max-width: 960px){
+        .mobile-shadow{
+            display: block
+        }
+    }
+
+
+    .shadow{
+        position: absolute;
+        left: -150px;
+       height: 600px;
+      
+    }
+
+    @media (max-width: 960px){
+        .shadow{
+            display: none
+        }
+    }
+
+.image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;   
+}
+
+
+.mobile-image{
+    display: none;
+    position: absolute;
+    z-index: 2;
+    height: 250px;
+    width: 400px;
+}
+.desktop{
+    position: absolute;
+   left: -80px;
+   height: 380px;
+   width: 450px;
+   
+ }
+
+@media (max-width: 960px){
+    .image{
+        overflow: visible;
+       margin-bottom: 50px;
+    }
+    .mobile-image{
+        display: block;
+    }
+
+    .desktop{
+        display: none;
+    }
+}
+
+
+
+h1{
+    font-size: 2rem;
+    margin-top: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+
+@media (max-width: 960px){
+   dt{
+    margin: 0.675rem 0;
+   }
+}
+
+dt{
+    display: flex;
+    color: #000;
+    font-weight: bold;
+    transition: 0.3s;
+    margin: 0.875rem 0;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
+img{
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+ .faq-container{
+  padding: 2.5rem;  
+}
+
+.faq{
+    margin-top: 1rem;
+}
+
+dd{
+    display: block;
+    font-size: 0.875rem;
+    color: #808080;
+    margin-bottom: 0.875rem;
+    transition: 0.3s;
+   
+}
+
+span{
+    font-weight: bold;
+}
+
+@media (max-width: 960px){
+   
+    dt{
+     margin: 0.675rem 0;
+    }
+ }
