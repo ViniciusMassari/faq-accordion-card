@@ -7,7 +7,9 @@ const events = ["click", "touchstart"]
 
 
 
-function toggleAccordion({currentTarget}) {
+function toggleAccordion(event) {
+    event.preventDefault()
+    const {currentTarget} = event 
     const hasAria = currentTarget.getAttribute("aria-expanded")
     if (hasAria == "false") {
         currentTarget.children[0].classList.add("selected")
