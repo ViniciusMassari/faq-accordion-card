@@ -19,6 +19,60 @@ img{
 
 
 
+.faq button{
+        background-color: inherit;
+        border: 0;
+        display: flex;
+        text-align: start;
+        padding: 10px 0;
+       width: 90%;
+        font-size: 0.875rem;
+        color: #909090;
+}
+
+@media (max-width: 960px){
+    .faq button{
+        padding: 0
+    }
+}
+
+
+.accordion-painel[hidden]{
+    display: flex;
+    font-size: 0.875rem;
+    color: #808080;
+    margin-bottom: 5px;
+}
+
+.accordion-title{
+    font-size: 0.875rem;
+color: black;
+margin-bottom: 10px;
+}
+
+.accordion-painel[hidden] p{
+    max-width: 350px;
+}
+
+@media (max-width: 960px){
+    .accordion-painel[hidden] p{
+        max-width: 300px;
+    }
+}
+
+
+.accordion-painel[hidden]{
+    font-size: 0.875rem;
+    color: #808080;
+    margin-bottom: 10px;
+}
+
+.accordion-painel[hidden] p{
+    max-width: 350px;
+}
+
+
+
 .wrapper{
  display: grid;
  grid-template-columns: repeat(2, 1fr);
@@ -34,10 +88,17 @@ position: relative;
         display: block;
         grid-template-columns: 1fr;
     margin-top: 5rem;
-    max-width: 40rem;
+    max-width: 25rem;
+    height: 40rem;
     }
 }
 
+
+.accordion-title{
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+   }
 
 
 
@@ -47,7 +108,6 @@ position: relative;
     z-index: 2;
     left: -96px;
     top: 250px;
- 
     }
 
     @media (max-width: 960px){
@@ -122,7 +182,7 @@ position: relative;
 
 
 
-h1{
+h2{
     font-size: 2rem;
     margin-top: 10px;
     text-transform: uppercase;
@@ -131,21 +191,6 @@ h1{
 
 
 @media (max-width: 960px){
-   dt{
-    margin: 0.675rem 0;
-   }
-}
-
-dt{
-    display: flex;
-    color: #000;
-    font-weight: bold;
-    transition: 0.3s;
-    margin: 0.875rem 0;
-    text-align: center;
-    align-items: center;
-    justify-content: space-between;
-}
 
 img{
     padding: 10px;
@@ -154,29 +199,34 @@ img{
 }
 
  .faq-container{
-  padding: 2.5rem;  
+  padding: 1rem;  
+}
+
+.faq-container h2{
+    font-size: 2rem;
+    margin-top: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 5rem;
+}
+
+.faq button{
+    width: 100%;
 }
 
 .faq{
     margin-top: 1rem;
-}
-
-dd{
-    display: block;
-    font-size: 0.875rem;
-    color: #808080;
-    margin-bottom: 0.875rem;
-    transition: 0.3s;
-   
+    display: flex;
+    flex-direction: column;
 }
 
 span{
     font-weight: bold;
 }
 
-@media (max-width: 960px){
-   
-    dt{
-     margin: 0.675rem 0;
-    }
+   .faq-container h2{
+    text-align: center;
+    margin-top: 5.5rem;
+   }
+
  }

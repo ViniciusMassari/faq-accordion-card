@@ -49,6 +49,7 @@ position: relative;
     grid-template-columns: 1fr;
     margin-top: 5rem;
     max-width: 30rem;
+    height: 40rem;
 }
 }
 // IMGS
@@ -118,59 +119,95 @@ position: relative;
 // FAQ
   
 .js .faq-container{
-  padding: 2.5rem;
-    
-    h1{
+  padding: 1rem;
+    h2{
         font-size: 2rem;
         margin-top: 10px;
         text-transform: uppercase;
         font-weight: bold;
-    }
-
-    .faq{
-        margin-top: 1rem;
-        dt{
-            display: flex;
-            color: $primary-font-color;
-            transition: 0.3s;
-            margin: 1.2rem 0;
-            text-align: center;
-            align-items: center;
-            justify-content: space-between;
-           animation: close 0.3s forwards;
-           @include breakpoint("large"){
-            margin: 0.675rem 0;
-           }
-            img{
-                padding: 10px;
-                cursor: pointer;
-                transition: 0.3s;
-            }
-           
-        }
-        dt.selected{
-            color: #000;
-            font-weight: bold;
-            img{
-                rotate: (180deg);
-            }
-        }
-        dd{
-            display: none;
-            font-size: 0.875rem;
-            color: $primary-font-color;
-            margin-bottom: 0.875rem;
-            transition: 0.3s;
-           
-        }
-
-        dd.selected{
-            display: block;
-            animation: open 0.3s forwards ease-in-out;
-           
+        margin-top: 5rem;
+        @include breakpoint("large"){
+          text-align: center;
+          margin-top: 6rem;
         }
     }
 }
+
+.faq{
+  margin-top: 1rem;
+  @include breakpoint("large"){
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+    width: 100%;
+  }
+  }
+
+.faq{
+ button{
+  background-color: inherit;
+  border: 0;
+  display: flex;
+  text-align: start;
+  padding: 10px 0;
+ width: 90%;
+  font-size: 0.875rem;
+  color: $primary-font-color;
+  @include breakpoint("large"){
+    width: 100%;
+  }
+ }
+ .accordion-title{
+  display: flex;
+  width: 90%;
+  font-size: 0.975rem;
+  justify-content: space-between;
+ }
+ .accordion-title.selected{
+  color: #000;
+  font-weight: bold;
+ }
+}
+
+.accordion-painel{
+font-size: 0.875rem;
+color: $primary-font-color;
+margin-bottom: 10px;
+
+p{
+  max-width: 350px;
+  &.selected{
+    animation: open ease-in 0.2s;
+  }
+  @include breakpoint("large"){
+    max-width: 300px;
+  }
+}
+}
+
+hr{
+  width: 90%;
+  margin-top: 1rem;
+  @include breakpoint("large"){
+    width: 90%;
+  }
+
+
+}
+
+
+.accordion-icon{
+padding:  2.5px;
+text-align: center;
+}
+.accordion-icon:hover{
+  cursor: pointer;
+}
+
+.accordion-icon.selected{
+ transform: rotate(180deg);
+}
+
 
 span{
     font-weight: bold;

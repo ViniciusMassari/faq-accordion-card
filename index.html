@@ -19,26 +19,53 @@
             <img src="src/imgs/bg-pattern-desktop.svg" alt="" class="shadow">
         </div>
         <section class="faq-container">
-            <h1>Faq</h1>
+            <h2>Faq</h2>
             <section class="faq">
-                <dl>
-                    <dt class="selected">How many team members can I invite ? <img src="src/imgs/icon-arrow-down.svg" alt=""> </dt>
-                    <dd class="selected">as many as you want.</dd>
-                    <hr>
-                    <dt >What is the maximum file upload size ? <img src="src/imgs/icon-arrow-down.svg" alt=""></dt>
-                    <dd>No more than 2GB. All files is your account must fit your allowed storage space.</dd>
-                    <hr>
-                    <dt>How do I reset my password ? <img src="src/imgs/icon-arrow-down.svg" alt=""></dt>
-                    <dd>Go to settings > security > password > password reset</dd>
-                    <hr>
-                    <dt>Can I cancel my subscription ? <img src="src/imgs/icon-arrow-down.svg" alt=""></dt>
-                    <dd >At any moment in the settings</dd>
-                    <hr>
-                    <dt>Do you provide additional support ? <img src="src/imgs/icon-arrow-down.svg" alt=""></dt>
-                    <dd >Yes ! contact me at <span>email@domain.com</span></dd>
-                    <hr>
-                    
-                  </dl>
+                <h3>
+                    <button aria-expanded="false" aria-controls="sec1"  id="accordion1id">
+                        <span class="accordion-title"> How many team members can I invite ? <span class="accordion-icon"> <img src="src/imgs/icon-arrow-down.svg" alt=""></span></span>
+                    </button>
+                </h3>
+                <div class="accordion-painel" id="sec1" hidden  aria-labelledby="accordion1id">
+                    <p>as many as you want.</p>
+                </div>
+                <hr>
+                <h3>
+                    <button aria-expanded="false" aria-controls="sec2" id="accordion2id">
+                        <span class="accordion-title"> What is the maximum file upload size ?<span class="accordion-icon"> <img src="src/imgs/icon-arrow-down.svg" alt=""></span></span>
+                    </button>
+                </h3>
+                <div class="accordion-painel" id="sec2" hidden aria-labelledby="accordion2id">
+                    <p>No more than 2GB. All files is your account must fit your allowed storage space.</p>
+                </div>
+                <hr>
+                <h3>
+                    <button aria-expanded="false" aria-controls="sec3" id="accordion3id">
+                        <span class="accordion-title"> How do I reset my password ? <span class="accordion-icon"> <img src="src/imgs/icon-arrow-down.svg" alt=""></span></span>
+                    </button>
+                </h3>
+                <div class="accordion-painel" hidden id="sec3"aria-labelledby="accordion3id">
+                    <p>Go to settings > security > password > password reset</p>
+                </div>
+                <hr>
+                <h3>
+                    <button aria-expanded="false" aria-controls="sec4" id="accordion4id">
+                        <span class="accordion-title">Can I cancel my subscription ?<span class="accordion-icon"> <img src="src/imgs/icon-arrow-down.svg" alt=""></span></span>
+                    </button>
+                </h3>
+                <div class="accordion-painel" hidden id="sec4" aria-labelledby="accordion4id">
+                    <p>At any moment in the settings</p>
+                </div>
+                <hr>
+                <h3>
+                    <button aria-expanded="false" aria-controls="sec5" id="accordion5id">
+                        <span class="accordion-title"> Do you provide additional support ? <span class="accordion-icon"> <img src="src/imgs/icon-arrow-down.svg" alt=""></span></span>
+                    </button>
+                </h3>
+                <div class="accordion-painel" hidden id="sec5"aria-labelledby="accordion5id">
+                    <p>Yes ! contact us at <span class="email">email@domain.com</span></p>
+                </div>
+                <hr>
             </section>
         </section>
     </main>
