@@ -11,6 +11,7 @@ function toggleAccordion({currentTarget}) {
     const hasAria = currentTarget.getAttribute("aria-expanded")
     if (hasAria == "false") {
         currentTarget.children[0].classList.add("selected")
+        currentTarget.children[0].children[0].classList.add("selected")
         currentTarget.parentElement.nextElementSibling.removeAttribute("hidden")
         currentTarget.parentElement.nextElementSibling.children[0].classList.add("selected")
         currentTarget.setAttribute("aria-expanded", "true")
@@ -18,10 +19,9 @@ function toggleAccordion({currentTarget}) {
         currentTarget.parentElement.nextElementSibling.setAttribute("hidden", true)
         currentTarget.setAttribute("aria-expanded", "false")
         currentTarget.children[0].classList.remove("selected")
+        currentTarget.children[0].children[0].classList.remove("selected")
         currentTarget.parentElement.nextElementSibling.children[0].classList.remove("selected")
-    }
- 
-   
+    } 
 }
 
 events.forEach(userEvent =>{
